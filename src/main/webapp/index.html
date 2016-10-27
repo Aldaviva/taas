@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Time as a Service</title>
+	</head>
+	
+	<body>
+		<h1>Time as a Service</h1>
+		
+		<h3>Example usage</h3>
+		<p>
+			<code>GET <a href="now">/taas/now</a></code><br />
+			<code>{ "hours": 17, "minutes": 31, "seconds": 35 }</code>
+		</p>
+		<p>
+			<code>GET <a href="now?timezone=Europe/London">/taas/now?timezone=Europe/London</a></code><br />
+			<code>{ "hours": 1, "minutes": 31, "seconds": 35 }</code>
+		</p>
+		
+		<h3>Description</h3>
+		<p>Get the current hours, minutes, and seconds in JSON. <br /> By default, this will be in the timezone of the server, but you can optionally pass a <code>?timezone=<strong>:timezone</strong></code> query parameter to use a <a href="http://www.joda.org/joda-time/timezones.html">different timezone</a>.</p>
+		
+	</body>
+</html>
