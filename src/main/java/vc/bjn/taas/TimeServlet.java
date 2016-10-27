@@ -2,6 +2,7 @@ package vc.bjn.taas;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.nio.charset.StandardCharsets;
 import java.util.Collections;
 import java.util.Map;
 import javax.servlet.ServletException;
@@ -22,6 +23,7 @@ public class TimeServlet extends HttpServlet {
     @Override
     public void doGet(final HttpServletRequest req, final HttpServletResponse resp) throws ServletException, IOException {
         resp.setContentType("application/json");
+        resp.setCharacterEncoding(StandardCharsets.UTF_8.displayName());
         resp.addHeader("Access-Control-Allow-Origin", "*");
         resp.addHeader("Cache-Control", "no-cache, must-revalidate");
         final PrintWriter respWriter = resp.getWriter();
